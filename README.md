@@ -4,13 +4,31 @@ A simple Node.js utility to convert JSON files to CSV format.
 
 ## Installation
 
+### Using npx (Recommended)
+
+No installation required! Use directly with npx:
+
+```bash
+npx @ceyhuncicek/jsontocsv <input-json-file> <output-csv-file>
+```
+
+### Local Installation
+
 ```bash
 npm install
 ```
 
 ## Usage
 
-### Command Line
+### Using npx (No Installation Required)
+
+```bash
+npx @ceyhuncicek/jsontocsv data.json output.csv
+```
+
+This will automatically download and run the latest version without requiring local installation.
+
+### Command Line (Local Installation)
 
 ```bash
 node jsonToCsv.js <input-json-file> <output-csv-file>
