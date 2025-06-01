@@ -1,8 +1,36 @@
 # JSON to CSV Converter
 
-A simple Node.js utility to convert JSON files to CSV format.
+A simple Node.js utility to convert JSON files to CSV format. Available both as a **web interface** and **CLI tool**.
 
-## Installation
+## 🌐 Web Interface
+
+Try the online converter: **[JsonToCsv Web App](https://ceyhuncicek.github.io/JsonToCsv/web/)**
+
+### Features:
+
+- 🖱️ Drag & drop JSON files
+- 📋 Paste JSON directly into the interface
+- 👀 Live JSON preview with auto-validation
+- 📊 Instant CSV conversion
+- 💾 Direct CSV download
+- 📱 Mobile-friendly design
+
+## 📁 Project Structure
+
+```
+JsonToCsv/
+├── web/                    # Web interface files
+│   ├── index.html         # Main HTML page
+│   ├── styles.css         # CSS styling
+│   ├── script.js          # JavaScript functionality
+│   └── README.md          # Web-specific documentation
+├── jsonToCsv.js           # CLI tool (main file)
+├── package.json           # NPM package configuration
+├── example-data/          # Sample JSON files for testing
+└── README.md              # This file
+```
+
+## 📦 CLI Tool Installation
 
 ### Using npx (Recommended)
 
@@ -18,7 +46,7 @@ npx @ceyhuncicek/jsontocsv <input-json-file> <output-csv-file>
 npm install
 ```
 
-## Usage
+## 🚀 Usage
 
 ### Using npx (No Installation Required)
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON to CSV Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🔄 JSON to CSV Converter</h1>
+        <p>Convert your JSON files to CSV format instantly in your browser</p>
+      </header>
+
+      <main>
+        <div class="upload-section">
+          <!-- Input method toggle -->
+          <div class="input-toggle">
+            <button class="toggle-btn active" id="uploadToggle">
+              📁 Upload File
+            </button>
+            <button class="toggle-btn" id="pasteToggle">📋 Paste JSON</button>
+          </div>
+
+          <!-- File upload area -->
+          <div class="upload-area" id="uploadArea">
+            <div class="upload-content">
+              <svg
+                class="upload-icon"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                ></path>
+              </svg>
+              <h3>Drop your JSON file here</h3>
+              <p>or click to browse</p>
+              <button type="button" class="browse-btn">Browse Files</button>
+            </div>
+            <input type="file" id="fileInput" accept=".json" hidden />
+          </div>
+
+          <!-- Paste JSON area -->
+          <div class="paste-area" id="pasteArea">
+            <textarea
+              id="jsonInput"
+              class="json-input"
+              placeholder='Paste your JSON here...
+
+Example:
+[
+  {"name": "John", "age": 30},
+  {"name": "Jane", "age": 25}
+]
+
+or
+
+{
+  "name": "John Doe",
+  "email": "john@example.com"
+}'
+            ></textarea>
+            <div class="paste-actions">
+              <button id="processJsonBtn" class="paste-btn">
+                Process JSON
+              </button>
+              <button id="clearJsonBtn" class="clear-paste-btn">Clear</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-section" id="previewSection" style="display: none">
+          <h3>JSON Preview</h3>
+          <pre id="jsonPreview" class="json-preview"></pre>
+          <div class="action-buttons">
+            <button id="convertBtn" class="convert-btn">Convert to CSV</button>
+            <button id="clearBtn" class="clear-btn">Clear</button>
+          </div>
+        </div>
+
+        <div class="result-section" id="resultSection" style="display: none">
+          <h3>CSV Result</h3>
+          <pre id="csvPreview" class="csv-preview"></pre>
+          <button id="downloadBtn" class="download-btn">Download CSV</button>
+        </div>
+
+        <div class="info-section">
+          <h3>Supported Formats</h3>
+          <div class="format-examples">
+            <div class="format-card">
+              <h4>Array of Objects</h4>
+              <pre><code>[
+  {"name": "John", "age": 30},
+  {"name": "Jane", "age": 25}
+]</code></pre>
+            </div>
+            <div class="format-card">
+              <h4>Key-Value Object</h4>
+              <pre><code>{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "city": "New York"
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>
+          Also available as CLI:
+          <code>npx @ceyhuncicek/jsontocsv input.json output.csv</code>
+        </p>
+        <p>
+          <a href="https://github.com/ceyhuncicek/JsonToCsv" target="_blank">
+            View on GitHub
+          </a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
