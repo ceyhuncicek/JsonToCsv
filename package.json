@@ -1,8 +1,11 @@
 {
-  "name": "jsontocsv",
+  "name": "@ceyhuncicek/jsontocsv",
   "version": "1.0.0",
   "description": "A Node.js utility to convert JSON files to CSV format",
   "main": "jsonToCsv.js",
+  "bin": {
+    "jsontocsv": "./jsonToCsv.js"
+  },
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,9 +14,10 @@
     "json",
     "csv",
     "converter",
-    "utility"
+    "utility",
+    "cli"
   ],
-  "author": "",
+  "author": "Ceyhun Cicek <ceyhuncicek@users.noreply.github.com>",
   "dependencies": {
     "csv-writer": "^1.6.0"
   }

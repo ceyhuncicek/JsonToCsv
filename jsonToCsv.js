@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
 const fs = require("fs");
 
